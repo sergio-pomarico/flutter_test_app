@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_testing_app/appbar.dart';
 
-class CounterPage extends StatefulWidget {
-  CounterPage({Key key}) : super(key: key);
+class CounterScreen extends StatefulWidget {
+  CounterScreen({Key key}) : super(key: key);
+
+  static String route = '/counter';
 
   @override
   _CounterPageState createState() => _CounterPageState();
 }
 
-class _CounterPageState extends State<CounterPage> {
+class _CounterPageState extends State<CounterScreen> {
   int _counter = 0;
 
   void _incrementCounter() {
@@ -19,9 +22,7 @@ class _CounterPageState extends State<CounterPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Counter page'),
-      ),
+      appBar: CustomAppBar(),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_testing_app/buttons.dart';
+import 'package:flutter_testing_app/counter.dart';
+import 'package:flutter_testing_app/home.dart';
+import 'package:flutter_testing_app/input.dart';
+import 'package:flutter_testing_app/list.dart';
 
 class CustomAppBar extends StatefulWidget implements PreferredSizeWidget {
   @override
@@ -28,11 +33,23 @@ class _CustomAppBarState extends State<CustomAppBar> {
             items: List<Map<String, String>>.from([
               {
                 'name': 'Home',
-                'route': '/home',
+                'route': HomeScreen.route,
               },
               {
                 'name': 'Buttons',
-                'route': '/buttons',
+                'route': ButtonsScreen.route,
+              },
+              {
+                'name': 'Inputs',
+                'route': InputsScreen.route,
+              },
+              {
+                'name': 'Counter',
+                'route': CounterScreen.route,
+              },
+              {
+                'name': 'List',
+                'route': ListsScreen.route,
               }
             ])
                 .map(
