@@ -8,13 +8,32 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:flutter_testing_app/main.dart';
+import 'package:flutter_testing_app/counter.dart';
+
+class MyApp extends StatelessWidget {
+  MyApp({this.child});
+
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) => MaterialApp(
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: child,
+      );
+}
 
 void main() {
   group('Counter app suit test >', () {
     testWidgets('Counter render correctly', (WidgetTester tester) async {
       // Build our app and trigger a frame.
-      await tester.pumpWidget(MyApp());
+      await tester.pumpWidget(
+        MyApp(
+          child: CounterPage(),
+        ),
+      );
 
       // find widget by key
       Key counterkey = Key('counter_text');
@@ -36,7 +55,11 @@ void main() {
 
     testWidgets('view updated correctly', (WidgetTester tester) async {
       // Build our app and trigger a frame.
-      await tester.pumpWidget(MyApp());
+      await tester.pumpWidget(
+        MyApp(
+          child: CounterPage(),
+        ),
+      );
 
       //Find by type
       Finder counterButton = find.byType(FloatingActionButton);

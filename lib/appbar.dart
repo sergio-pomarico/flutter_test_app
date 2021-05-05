@@ -5,7 +5,7 @@ class CustomAppBar extends StatefulWidget implements PreferredSizeWidget {
   _CustomAppBarState createState() => _CustomAppBarState();
 
   @override
-  Size get preferredSize => Size.fromHeight(30.0);
+  Size get preferredSize => Size.fromHeight(kToolbarHeight);
 }
 
 class _CustomAppBarState extends State<CustomAppBar> {
@@ -14,6 +14,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
     return AppBar(
       key: Key('app_bar'),
       title: Text('Flutter e2n test'),
+      leading: SizedBox(),
       actions: <Widget>[
         DropdownButtonHideUnderline(
           child: DropdownButton<String>(
@@ -27,7 +28,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
             items: List<Map<String, String>>.from([
               {
                 'name': 'Home',
-                'route': '/',
+                'route': '/home',
               },
               {
                 'name': 'Buttons',

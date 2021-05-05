@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-
-  final String title;
+class CounterPage extends StatefulWidget {
+  CounterPage({Key key}) : super(key: key);
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _CounterPageState createState() => _CounterPageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _CounterPageState extends State<CounterPage> {
   int _counter = 0;
 
   void _incrementCounter() {
@@ -22,7 +20,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text('Counter page'),
       ),
       body: Center(
         child: Column(

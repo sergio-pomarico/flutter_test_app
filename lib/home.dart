@@ -13,6 +13,14 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(),
+      body: Center(
+        child: Text(
+          'Flutter testing',
+          key: Key('main_text'),
+          textAlign: TextAlign.center,
+          style: Theme.of(context).textTheme.headline4,
+        ),
+      ),
     );
   }
 }
