@@ -12,7 +12,7 @@ class ButtonsScreen extends StatefulWidget {
 }
 
 class _ButtonsScreenState extends State<ButtonsScreen> {
-  String buttonType = 'no click';
+  String buttonType = 'ninguno';
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +42,6 @@ class _ButtonsScreenState extends State<ButtonsScreen> {
               },
               child: Text('Flat Button'),
             ),
-            SizedBox(height: 16),
             SizedBox(height: 16),
             IconButton(
               key: Key('icon_button'),

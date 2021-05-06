@@ -12,6 +12,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: Key('home_view'),
       appBar: CustomAppBar(),
       body: Center(
         child: Text(
